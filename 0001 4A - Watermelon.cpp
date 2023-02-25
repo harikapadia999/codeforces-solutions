@@ -11,6 +11,7 @@ int main()
     return 0;
 }
 /*
+Explanation:
 We start by reading the input integer w from the user using the cin function.
 
 Next, we check if the weight of the watermelon is even and greater than 2. If it is, then we print "YES", which means that the boys can divide the watermelon into two parts, each of them weighing even number of kilos. Otherwise, we print "NO", which means that the boys cannot divide the watermelon in the way they want.
