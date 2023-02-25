@@ -18,7 +18,15 @@ int main() {
     cout << count << endl;
     return 0;
 }
-
+/*
+Explanation:
+Read the inputs n, k and scores from the user.
+Initialize a count variable to 0, which will be used to count the number of participants who advance to the next round.
+Find the score of the k-th place finisher using the index k-1 and store it in k_score.
+Iterate through the list of scores using a loop and check if the score of each participant is greater than or equal to k_score and is also positive.
+If the condition in step 4 is satisfied, increment the count variable.
+After the loop, output the value of count, which represents the number of participants who will advance to the next round.
+*/
 
 or 
   
