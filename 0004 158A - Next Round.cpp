@@ -1,3 +1,38 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    int a;
+    for (int i = 0; i < k; ++i)
+    {
+        cin >> a;
+        if (a == 0)
+        {
+            cout << i << endl;
+            return 0;
+        }
+    }
+    int b;
+    for (int i = k; i < n; ++i)
+    {
+        cin >> b;
+        if (b != a)
+        {
+            cout << i << endl;
+            return 0;
+        }
+    }
+    cout << n << endl;
+    return 0;
+}  
+
+
+or
+    
+    
 #include <iostream>
 using namespace std;
 
@@ -28,40 +63,6 @@ If the condition in step 4 is satisfied, increment the count variable.
 After the loop, output the value of count, which represents the number of participants who will advance to the next round.
 */
 
-or 
+
   
   
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    int n, k;
-    cin >> n >> k;
-
-    int a;
-    for (int i = 0; i < k; ++i)
-    {
-        cin >> a;
-        if (a == 0)
-        {
-            cout << i << endl;
-            return 0;
-        }
-    }
-
-    int b;
-    for (int i = k; i < n; ++i)
-    {
-        cin >> b;
-        if (b != a)
-        {
-            cout << i << endl;
-            return 0;
-        }
-    }
-
-    cout << n << endl;
-    return 0;
-}  
