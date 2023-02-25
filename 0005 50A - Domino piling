@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int n,m;
+    cin>>n>>m;
+    cout<<n*m/2<<endl;
+    return 0;
+}
+
+
+or
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int m, n;
+    cin >> m >> n;
+
+    // The number of dominoes that can be placed is simply the
+    // floor of (M*N)/2, since each domino covers two squares.
+    int num_dominoes = (m * n) / 2;
+
+    cout << num_dominoes << endl;
+    return 0;
+}
+
+/*
+Explanation:
+We can solve this problem by observing that each domino covers two squares, and that we can place the dominoes in a chessboard-like pattern on the board. That is, we can place the first domino horizontally, the second one vertically, the third one horizontally, and so on, until we run out of space. In this way, we can ensure that no two dominoes overlap.
+
+The maximum number of dominoes that can be placed on the board is therefore equal to the floor of (M*N)/2, since each domino covers two squares. This is the answer we output.
+
+For example, if the input is 3 4, the board looks like this:
+
++-+-+-+-+-+
+| | | | | |
++-+-+-+-+-+
+| | | | | |
++-+-+-+-+-+
+| | | | | |
++-+-+-+-+-+
+
+We can place the dominoes like this:
+
++-+-+-+--+
+|X|X| |  |
++-+-+-+--+
+|X|X| |  |
++-+-+-+--+
+|X|X|X|X |
++-+-+-+-+-+
+
+where each X represents a square covered by a domino. There are a total of 6 dominoes on the board, which is equal to the floor of (3*4)/2.
+*/
