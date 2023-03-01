@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int i,j,x,y,val=0;
+    for(i=1;i<=5;i++)
+        for(j=1;j<=5;j++){
+            cin>>val;
+            if(val)x=i,y=j;
+        }
+    cout<<abs(x-3)+abs(y-3);
+    return 0;
+}
+
+/*
+ we declare four integers: i, j, x, y, and val. i and j are used as counters for the nested for loop to traverse the 5x5 matrix. 
+ x and y store the row and column index of the cell containing the first non-zero value, respectively. val stores the current input value.
+
+nested for loops to traverse the 5x5 matrix. 
+cin>>val; takes input from the user for each cell of the matrix. 
+The if statement if(val)x=i,y=j; checks if the current value of the cell is non-zero, 
+and if it is, stores the current row and column index of the cell in x and y respectively.
+
+ calculates the Manhattan distance of the cell containing the first non-zero value from the center of the matrix using the formula |x−3|+|y−3|. 
+ abs() is used to calculate the absolute value of the difference between the row and column indices of 
+ the cell containing the first non-zero value and 3 (the center index of the 5x5 matrix).
+
+
+*/
