@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	string s;
+	cin >> s;
+	vector<int> v;
+	for(int i=0;i!=s.size();i++)
+	{
+		if(s[i]!='+') 
+			v.push_back(s[i]-'0');
+	}
+	sort(v.begin(),v.end());
+	for(int i=0;i!=v.size();i++)
+	{
+		if(i) cout << "+";
+		cout << v[i];
+	}
+	cout << endl;
+    return  0;
+}
+
+
+or
+
+
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+
+using namespace std;
+int x;
+int sz,a[30000];
+int main(){
+  while (cin>>x) {
+    a[sz++] = x;
+  }
+  sort(a,a+sz);
+  for (int i = 0; i < sz-1; ++i) cout<<a[i]<<"+";
+  cout<<a[sz-1]<<endl;
+}
