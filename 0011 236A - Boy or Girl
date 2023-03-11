@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string str;
+    cin >> str;
+    unordered_set<char> M(str.begin(), str.end());
+    cout << (M.size() % 2 ? "IGNORE HIM!" : "CHAT WITH HER!");
+}
+/*
+declare a string variable called str and then take input from the user and store it in str.
+
+
+creates an unordered_set called M and initializes it with the characters in the string str. An unordered_set is a container that stores unique elements in no particular order, and is used here to remove duplicates from the string.
+
+ternary operator to output either "IGNORE HIM!" or "CHAT WITH HER!" depending on the size of the unordered_set M. If M.size() is odd, then the program outputs "IGNORE HIM!", otherwise it outputs "CHAT WITH HER!".
+
+*/
