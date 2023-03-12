@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int t,n=0;cin >> t;
+	char s[51];
+	for(int i=0;i<t;i++){cin >> s[i];
+		if(s[i]==s[i-1])n++;
+	}
+	cout<<n<<endl;
+    return  0;
+}
+/*
+nclude the standard C++ library header file bits/stdc++.h.
+Define the main function.
+Declare integer variables t and n and initialize n to 0.
+Read an integer value from the standard input and store it in t.
+Declare a character array s with a maximum size of 51.
+Start a loop that will execute t times.
+Read a single character from the standard input and store it in the current index of s.
+If the current character is the same as the previous character in the array (i.e., s[i] == s[i-1]), increment n.
+After the loop completes, output the value of n to the standard output followed by a newline character.
+Return 0 to indicate successful program execution.
+*/
