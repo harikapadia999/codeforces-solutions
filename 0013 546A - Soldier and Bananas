@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fast ios_base::sync_with_stdio(false);cin.tie(0); cout.tie(0);
+
+int main()
+{
+	fast
+	ll k,w,n,tmp;
+	cin>>k>>n>>w;
+	tmp=(w+1)*w/2*k;
+	if(tmp<=n)cout<<"0"<<endl;
+	else cout<<tmp-n<<endl;
+    return  0;
+}
+/*
+This line creates a macro which disables synchronization between the C++ standard input/output streams and the C standard input/output streams. 
+This improves the speed of input/output operations.
+
+These lines define the main function and declare three long long variables: k, w, and n. 
+They then read in three integers from standard input using cin.
+
+This line calculates the total cost of all the bananas by multiplying the price per banana k by the sum of the first w integers 
+(which represents the number of bananas bought). This is done using the formula sum = (n / 2) * (a + b), 
+where a and b are the first and last terms of the sum and n is the number of terms.
+
+These lines check if the total cost of all the bananas is less than or equal to n. 
+If it is, then the output is "0". If not, then the output is the difference between the total cost and n.
+*/
