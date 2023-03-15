@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int x;cin>>x;
+    cout<<(x-1)/5+1;
+    return 0;
+}
+
+/*
+int x;cin>>x; declares an integer variable x and reads an integer value from standard input (typically the keyboard) and assigns it to x.
+
+(x-1)/5+1 is an expression that calculates the number of groups of five that can be formed from x objects. Here's how it works:
+
+(x-1) subtracts one from x to account for the case where x is a multiple of 5. For example, if x is 15, (x-1) would be 14.
+/5 divides (x-1) by 5 to get the number of groups of five that can be formed.
++1 adds 1 to the result to account for the remaining objects that don't form a complete group of five. For example, if x is 15, there are three complete groups of five and three remaining objects, so the result would be 4.
+cout<< is an output stream that sends the result to standard output (typically the console).*/
