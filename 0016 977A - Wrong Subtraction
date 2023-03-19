@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+ using namespace std;
+ int main()
+{
+    long n,k;
+    cin>>n>>k;
+    while(k--)
+    {
+        if(n%10==0)
+        n/=10;
+        else
+        n--;
+    }
+    cout<<n;
+    return 0;
+}
+
+/*
+while(k--) { if(n%10==0) n/=10; else n--; } is a loop that performs the decrement operation k times on n. 
+In each iteration of the loop, if the last digit of n is zero, n is divided by 10 to remove the trailing zero. Otherwise, n is decremented by 1.
+
+cout<<n; outputs the final value of n to the console.
+
+*/
