@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long k,n,g;
+main(){
+	cin>>n;
+	while (n>0) {
+    	k=n%10;
+     	if (k ==4  || k==7) g++;
+     	n=n/10;
+     }
+     if (g==4 || g==7) cout<<"YES"<<endl; 
+	 else cout<<"NO"<<endl; 
+}
+/*
+while (n>0) {...} is a loop that iterates as long as n is greater than 0.
+
+k=n%10; calculates the remainder of n divided by 10 and stores it in the variable k.
+
+if (k ==4 || k==7) g++; checks if the remainder k is equal to 4 or 7, and increments the variable g if it is.
+
+n=n/10; updates the value of n by dividing it by 10, effectively removing the last digit.
+
+if (g==4 || g==7) cout<<"YES"<<endl; else cout<<"NO"<<endl;
+checks if the number of lucky digits (stored in g) is either 4 or 7, and outputs "YES" if it is, or "NO" otherwise.
+
+
+*/
