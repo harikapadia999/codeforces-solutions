@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	string s;cin>>s;
+	int n=0;
+	for(char c:s){
+		if(islower(c))n++;
+		else n--;
+	}
+	for(char c:s){
+		if(n>=0)cout<<(char)tolower(c);
+		else cout<<(char)toupper(c);
+	}
+    return  0;
+}
+/*
+for(char c:s){ if(islower(c)) n++; else n--; } iterates over each character c in the string s. If the character c is lowercase, n is incremented by 1. 
+Otherwise, n is decremented by 1. This loop calculates the difference between the number of lowercase and uppercase characters in the string.
+
+for(char c:s){ if(n>=0) cout<<(char)tolower(c); else cout<<(char)toupper(c); } iterates over each character c in the string s again. 
+If the difference calculated in the previous loop n is greater than or equal to 0, 
+the character c is converted to lowercase using tolower(c) and output to the console using cout<<(char)tolower(c). 
+Otherwise, the character c is converted to uppercase using toupper(c) and output to the console using cout<<(char)toupper(c).
+
+
+*/
