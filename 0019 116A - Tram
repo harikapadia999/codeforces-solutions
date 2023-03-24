@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define SIZE 1e6+2	
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main()
+{
+	fast
+	ll t,s=0,c=0;cin >> t;
+	while (t--)	{
+		ll a,b;cin>>a>>b;
+		s+=(b-a);
+		if(s>c)c=s;
+	}
+	cout<<c<<endl;
+    return 0;
+}
+
+/*
+The while loop executes t times. In each iteration, it reads in two integers a and b from input and calculates the difference b-a.
+It then adds this difference to the running total s and updates the maximum value of s encountered so far in the variable c.
+
+The line cout<<c<<endl; prints the maximum value of s encountered to the console followed by a newline character.
+*/
