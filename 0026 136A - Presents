@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main()
+{
+	fast
+    ll n,p[100];cin >> n;
+    for (int i=0;i<n;i++)cin >> p[i];
+    for (int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(p[j]==i+1){
+                cout<<j+1<<" ";
+                break;
+            }
+        }
+    }
+    return 0;
+}
+
+for(int i=0;i<n;i++) cin >> p[i];: This loop reads n values from the user input and stores them in the array p.
+
+for(int i=0;i<n;i++): This loop iterates from 0 to n-1.
+
+for(int j=0;j<n;j++): This loop also iterates from 0 to n-1.
+
+if(p[j]==i+1): This condition checks if the value of p[j] is equal to i+1.
+
+cout<<j+1<<" ";: If the condition in step 9 is true, then this line prints the value of j+1 followed by a space.
+
+break;: This statement breaks out of the inner loop once a matching value of p[j] is found.
