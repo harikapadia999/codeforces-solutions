@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main()
+{
+	fast
+    ll n,prv=0,cur=0,tot=0;cin >> n;
+    while(n--){
+        cin>>cur;
+        if(cur!=prv)++tot;
+        prv=cur;
+    }
+    cout<<tot<<endl;
+    return 0;
+}
+
+
+
+
+
+
