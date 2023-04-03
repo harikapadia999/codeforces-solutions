@@ -1,0 +1,77 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    int y;
+    cin >> y;
+
+    // Loop through years until we find one with distinct digits
+    while (true) {
+        y++; // Check the next year
+        set<int> digits; // Use a set to keep track of unique digits
+        int year = y;
+        bool distinct = true;
+        while (year > 0) {
+            int digit = year % 10;
+            if (digits.count(digit) > 0) {
+                // If the digit is already in the set, the year does not have distinct digits
+                distinct = false;
+                break;
+            }
+            digits.insert(digit);
+            year /= 10;
+        }
+        if (distinct) {
+            cout << y << endl;
+            break;
+        }
+    }
+    return 0;
+}
+
+
+or
+
+
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+int main()
+{
+	fast
+    ll y;cin>>y;
+    while (true)
+    {
+        y+=1;
+        int a=y/1000;
+        int b=y/100 % 10;
+        int c=y/10 % 10;
+        int d=y % 10;
+        if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d )break;
+    }
+    cout<<y<<endl;
+    return 0;
+}
+
+
+/*
+ll y;cin>>y;: This line declares a long long integer variable y and reads its value from the standard input.
+
+while (true): This is a while loop that will continue until it is manually broken.
+
+y+=1;: This line increments the value of y by 1 in each iteration of the while loop.
+
+int a=y/1000;: This line calculates the first digit of y by dividing it by 1000 and truncating the decimal places.
+
+int b=y/100 % 10;: This line calculates the second digit of y by dividing it by 100, taking the remainder after dividing by 10, and then truncating the decimal places.
+
+int c=y/10 % 10;: This line calculates the third digit of y by dividing it by 10, taking the remainder after dividing by 10, and then truncating the decimal places.
+
+int d=y % 10;: This line calculates the fourth digit of y by taking the remainder of y when divided by 10.
+
+if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d )break;: This line checks if all four digits of y are distinct. If they are, the while loop is broken using the break statement.
+
+cout<<y<<endl;: This line prints the final value of y to the standard output.
+*/
