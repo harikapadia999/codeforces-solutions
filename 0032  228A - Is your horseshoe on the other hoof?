@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c,d;
+    cin >> a >> b >> c >> d;
+
+    int distinct;
+    distinct = 1;
+    
+    if (b != a)
+        distinct += 1;
+    if (c != a && c != b)
+        distinct += 1;
+    if (d != a && d != b && d != c)
+        distinct += 1;
+
+    cout << (4 - distinct) << endl;
+
+    return 0;
+}
+
+/*
+int distinct;: This line declares an integer variable named distinct.
+
+distinct = 1;: This line initializes the distinct variable to 1.
+
+if (b != a): This line begins an if statement that checks if b is not equal to a.
+
+distinct += 1;: This line increments the distinct variable by 1 if b is not equal to a.
+
+if (c != a && c != b): This line begins another if statement that checks if c is not equal to a and c is not equal to b.
+
+distinct += 1;: This line increments the distinct variable by 1 if c is not equal to a and c is not equal to b.
+
+if (d != a && d != b && d != c): This line begins a third if statement that checks if d is not equal to a, d is not equal to b, and d is not equal to c.
+
+distinct += 1;: This line increments the distinct variable by 1 if d is not equal to a, d is not equal to b, and d is not equal to c.
+
+cout << (4 - distinct) << endl;: This line outputs the result of the expression (4 - distinct) to the standard output, which is the number of integers that are repeated among the four input values.
+*/
