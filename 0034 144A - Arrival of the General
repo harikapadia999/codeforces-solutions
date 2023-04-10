@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+#define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+void solve(){
+   int n;cin >> n;
+   int arr[n],mi=101,ma=0,mini,maxi;
+   for(int i=0;i<n;i++){
+        cin >> arr[i];
+        if(arr[i]<=mi){
+            mi=arr[i];
+            mini=i;
+        }
+        if(arr[i]>ma){
+            ma=arr[i];
+            maxi=i;
+        }
+   }
+   if(maxi>mini)mini++;
+   cout<<maxi+(n-1)-mini<<endl;
+}
+
+int main()
+{
+	  fast
+    solve();  
+    return 0;
+}
+
+
+
+
+
+
